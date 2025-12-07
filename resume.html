@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piyush Upreti - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #0f172a;   /* deep navy */
+      --accent:  #3b82f6;   /* blue accent */
+      --bg:      #f9fafb;
+      --text:    #111827;
+      --muted:   #4b5563;
+      --border:  #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 16px auto;
+      padding: 24px 28px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+      border-radius: 8px;
+      border-top: 4px solid var(--accent);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 6px;
+<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .meta-row {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .meta-row span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+      border-left: 1px solid var(--muted)
+    }
+
+    .links {
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3px;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding: 0 6px;
+  border-right: 1px solid var(--border);
+    }
+
+    .links a:last-child {
+  border-right: none;
+}
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    h2.section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 14px 0 6px;
+<!--      display: inline-flex;-->
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+
+<!--    h2.section-title::before {-->
+<!--      content: "";-->
+<!--      width: 24px;-->
+<!--      height: 2px;-->
+<!--      border-radius: 999px;-->
+<!--      background: linear-gradient(to right, var(&#45;&#45;accent), var(&#45;&#45;primary));-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+
+    .section {
+      gap: 6px;
+<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      margin: 0 0 5px;
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 6px 20px;
+      font-size: 12px;
+    }
+
+    .skill-line strong {
+      color: var(--primary);
+    }
+
+    .experience-role {
+      margin-top: 8px;
+      padding: 6px 6px;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .role-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    .role-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .company-line {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    ul.bullets {
+      margin: 5px 0 3px 18px;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    ul.bullets li {
+      margin-bottom: 3px;
+    }
+
+    .tech-stack {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-style: italic;
+    }
+
+    .project {
+      margin-top: 6px;
+      padding-top: 6px;
+
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--primary);
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .education-entry {
+      font-size: 12px;
+    }
+
+    .education-entry .school {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .education-entry .degree {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .list-inline {
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .list-inline span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+    }
+
+    /* Print styling for 2-page PDF */
+    @media print {
+      body {
+        background: #ffffff;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0 auto;
+        border-radius: 0;
+        max-width: 100%;
+        padding: 10mm 12mm !important;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="name">PIYUSH UPRETI</div>
+      <div class="title">Software Developer | Data Engineer</div>
+      <div class="meta-row">
+        <span>Bengaluru, India</span>
+        <span>Email: piyushupreti07@gmail.com</span>
+        <span>Phone: +91 8765830338</span>
+      </div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/piyush-upreti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Petrinax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://medium.com/@piyushupreti07" target="_blank" rel="noopener noreferrer">Medium</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Profile Summary</h2>
+      <div class="summary">
+        <p>
+          Software Developer &amp; Data Engineer with experience building platforms, orchestration engines, AI-driven automations, and data systems at enterprise scale. Proven ability in system design, distributed computing, and delivering cloud-native products across business domains.
+        </p>
+        <p>
+          Drives technical execution, collaborates with cross-functional stakeholders, mentors engineers, and ships reliable systems with measurable outcomes. Experienced in building high-availability platforms, optimizing observability, and enabling intelligent automation powered by AI agents.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-line">
+          <strong>Languages &amp; Frameworks:</strong>
+          Python, SQL, Flask, FastAPI, Django, PySpark, Pandas, JavaScript, C/C++
+        </div>
+        <div class="skill-line">
+          <strong>Data &amp; Platforms:</strong>
+          Azure, Google Cloud, PostgreSQL, Redis, BigQuery, Airflow, Kafka, DataProc, Databricks, Kubernetes
+        </div>
+        <div class="skill-line">
+          <strong>DevOps &amp; Observability:</strong>
+          Docker, Prometheus, Grafana, Istio, OpenTelemetry
+        </div>
+        <div class="skill-line">
+          <strong>AI &amp; Automation Tools:</strong>
+          LangChain, LangGraph, Phoenix Tracing, Enterprise LLM Gateways, Google Gemini, OpenAI GPTs
+        </div>
+        <div class="skill-line">
+          <strong>Core Engineering:</strong>
+          Microservices, Distributed Systems, Agentic AI, Data Structures &amp; Algorithms, Problem Solving
+        </div>
+        <div class="skill-line">
+          <strong>Professional Skills:</strong>
+          Architectural thinking, Communication, Adaptability, Cross-Functional Collaboration
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Engineer III</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">Sept 2024 - Present</div>
+        </div>
+        <ul class="bullets">
+          <li>Built a <strong>Multi-Agent Orchestration Platform</strong> automating pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
+          <li>Co-authored design documents and <strong>led delivery across four backend teams.</strong></li>
+          <li>Developed the ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains to onboard data and process 100M+ records/month.</strong></li>
+          <li>Designed a Centralized Logging and Audit Platform with lineage, quarantine tracking, and pipeline health visibility, <strong>improving incident resolution time by 50%.</strong></li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: LangChain, LangGraph, FastAPI, PySpark, Kafka, BigQuery, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Engineer II</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">June 2022 - Aug 2024</div>
+        </div>
+        <ul class="bullets">
+          <li>Built <strong>event-driven ETL frameworks</strong> for fintech workloads, enhancing reliability and throughput.</li>
+          <li>Developed scalable Flask-based backend services achieving <strong>90%+ test coverage</strong> and <strong>95% code quality.</strong></li>
+          <li>Migrated <strong>2000+ pipelines</strong> to managed cloud infrastructure with <strong>zero downtime.</strong></li>
+          <li>Led peer reviews, enforced engineering best practices, and accelerated new hire onboarding.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: Flask, PySpark, REST APIs, Azure, GCS, Databricks, SQL, BigQuery
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Developer Intern</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">May 2021 - July 2021</div>
+        </div>
+        <ul class="bullets">
+          <li>Developed UI dashboards and backend logic for an HR automation web application.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: React, Redux, Node.js, TypeScript, CosmosDB
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE BREAK HERE FOR PRINT -->
+    <section class="section page-break">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="project">
+        <div class="project-title">AI-Powered Multi-Agent Data Platform</div>
+        <ul class="bullets">
+          <li>Designed and deployed a production-grade orchestration engine coordinating multiple AI agents for data discovery and ETL pipeline generation across environments.</li>
+          <li>Integrated intelligent routing, human-in-the-loop approvals, and observability hooks.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: LangChain, LangGraph, FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Finance Data Lakehouse &amp; ETL Engine</div>
+        <ul class="bullets">
+          <li>Built the core ETL engine enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&amp;A workloads.</li>
+          <li>Delivered batch + streaming pipelines supporting 100M+ monthly records.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: PySpark, Kafka, Airflow, Apache Hudi, DataProc, BigQuery
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Centralized Logging &amp; Audit Platform</div>
+        <ul class="bullets">
+          <li>Designed SDK and data models to instrument lineage and failure tracking across pipelines.</li>
+          <li>Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: PostgreSQL, OpenTelemetry, OpenLineage
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Unified Data Ingestion Web Service</div>
+        <ul class="bullets">
+          <li>Built ingestion &amp; consumption APIs with multi-cloud support, enabling connectivity to data lakes and warehouse storage systems.</li>
+          <li>Reduced production incidents by 80% and improved test coverage to &gt;90%.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Flask, Kubernetes, Docker, Google Cloud, Azure, BigQuery, Akeyless
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Additional Projects</h2>
+
+      <div class="project">
+        <div class="project-title">AI-Driven Textile Workflow Manager</div>
+        <ul class="bullets">
+          <li>Built a real-time order management system for factory operations and customer support.</li>
+          <li>Integrated Gmail + Gemini AI agent to extract order context and auto-respond to emails.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Flask, SocketIO, SQLAlchemy, SQLite, Gmail API, Google Gemini
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Custom Index Builder &amp; Analytics Engine</div>
+        <ul class="bullets">
+          <li>Full-stack solution for constructing stock indices, automated ingestion, performance analytics, and export workflows.</li>
+          <li>Added modular architecture, Redis caching, FastAPI APIs and Docker packaging.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: FastAPI, Redis, Pandas, SQLite, Docker
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-entry">
+        <div class="school"><strong>Indian Institute of Technology (BHU), Varanasi</strong></div>
+        <div class="degree">B.Tech in Electronics Engineering | 2018 - 2022</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Honors &amp; Achievements</h2>
+      <div class="list-inline">
+        <span>AIR 2304 in IIT JEE (Advanced), 2018</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Interests</h2>
+      <div class="list-inline">
+        <span>AI systems</span>
+        <span>automation platforms</span>
+        <span>trading analytics</span>
+        <span>distributed systems</span>
+        <span>writing technical blogs</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
