@@ -43,7 +43,6 @@
       align-items: center;
       flex-direction: column;
       gap: 6px;
-<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
       padding-bottom: 10px;
       margin-bottom: 10px;
     }
@@ -59,7 +58,7 @@
     .title {
       font-size: 15px;
       font-weight: 600;
-      color: var(--navy);
+      color: var(--muted);
     }
 
     .meta-row {
@@ -129,7 +128,7 @@
 
     .summary p {
       margin: 0 0 5px;
-      color: var(--muted);
+      color: var(--primary);
     }
 
     .skills-grid {
@@ -140,13 +139,12 @@
     }
 
     .skill-line strong {
-      color: var(--primary);
+      color: var(--text);
     }
 
     .experience-role {
       margin-top: 8px;
       padding: 6px 6px;
-      border-bottom: 1px dotted var(--border);
     }
 
     .role-header {
@@ -154,6 +152,7 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 10px;
+      border-bottom: 1px dotted var(--border);
     }
 
     .role-title {
@@ -167,6 +166,7 @@
       color: var(--muted);
       text-align: right;
       white-space: nowrap;
+      align-self: end;
     }
 
     .company-line {
@@ -212,6 +212,7 @@
     .education-entry .school {
       font-weight: 600;
       color: var(--primary);
+      font-size: 12.5px;
     }
 
     .education-entry .degree {
@@ -334,10 +335,8 @@
       <h2 class="section-title">Profile Summary</h2>
       <div class="summary">
         <p>
-          Software Developer &amp; Data Engineer with experience building platforms, orchestration engines, AI-driven automations, and data systems at enterprise scale. Proven ability in system design, distributed computing, and delivering cloud-native products across business domains.
-        </p>
-        <p>
-          Drives technical execution, collaborates with cross-functional stakeholders, mentors engineers, and ships reliable systems with measurable outcomes. Experienced in building high-availability platforms, optimizing observability, and enabling intelligent automation powered by AI agents.
+          Software Developer with experience building <strong>Data Platforms</strong> and <strong>Backend Services</strong>, leveraging <strong>Agentic AI systems</strong> for workflow automation.
+          Demonstrated expertise in system design, distributed computing, and building scalable cloud-native platforms adopted across business domains.
         </p>
       </div>
     </section>
@@ -346,28 +345,24 @@
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
         <div class="skill-line">
-          <strong>Languages &amp; Frameworks:</strong>
-          Python, SQL, Flask, FastAPI, Django, PySpark, Pandas, JavaScript, C/C++
+          <strong>Languages & Frameworks:</strong>
+          Python, SQL, Flask, FastAPI, Django, PySpark, Pandas
         </div>
         <div class="skill-line">
-          <strong>Data &amp; Platforms:</strong>
-          Azure, Google Cloud, PostgreSQL, Redis, BigQuery, Airflow, Kafka, DataProc, Databricks, Kubernetes
+          <strong>Data & Platforms:</strong>
+          Google Cloud, Azure, Databricks, BigQuery, DataProc, Airflow, Kafka, PostgreSQL, Redis, Kubernetes, Docker
         </div>
         <div class="skill-line">
-          <strong>DevOps &amp; Observability:</strong>
-          Docker, Prometheus, Grafana, Istio, OpenTelemetry
+          <strong>Observability & Monitoring:</strong>
+          Grafana, Prometheus, Istio, OpenTelemetry, OpenLineage
         </div>
         <div class="skill-line">
-          <strong>AI &amp; Automation Tools:</strong>
+          <strong>AI & Automation Tools:</strong>
           LangChain, LangGraph, Phoenix Tracing, Enterprise LLM Gateways, Google Gemini, OpenAI GPTs
         </div>
         <div class="skill-line">
-          <strong>Core Engineering:</strong>
+          <strong>System Concepts:</strong>
           Microservices, Distributed Systems, Agentic AI, Data Structures &amp; Algorithms, Problem Solving
-        </div>
-        <div class="skill-line">
-          <strong>Professional Skills:</strong>
-          Architectural thinking, Communication, Adaptability, Cross-Functional Collaboration
         </div>
       </div>
     </section>
@@ -384,10 +379,10 @@
           <div class="role-meta">Sept 2024 - Present</div>
         </div>
         <ul class="bullets">
-          <li>Built a <strong>Multi-Agent Orchestration Platform</strong> automating pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
+          <li>Built a <strong>Multi-Agent Orchestration Platform</strong> simplifying pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
           <li>Co-authored design documents and <strong>led delivery across four backend teams.</strong></li>
-          <li>Developed the ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains to onboard data and process 100M+ records/month.</strong></li>
-          <li>Designed a Centralized Logging and Audit Platform with lineage, quarantine tracking, and pipeline health visibility, <strong>improving incident resolution time by 50%.</strong></li>
+          <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains to onboard data and process 100M+ records/month.</strong></li>
+          <li>Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, <strong>improving incident resolution time by 50%.</strong></li>
         </ul>
         <div class="tech-stack">
           Tech Stack: LangChain, LangGraph, FastAPI, PySpark, Kafka, BigQuery, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage
@@ -431,14 +426,15 @@
     </section>
 
     <!-- PAGE BREAK HERE FOR PRINT -->
-    <section class="section page-break">
+<!--    <section class="section page-break">-->
+    <section class="section">
       <h2 class="section-title">Key Projects</h2>
 
       <div class="project">
         <div class="project-title">AI-Powered Multi-Agent Data Platform</div>
         <ul class="bullets">
-          <li>Designed and deployed a production-grade orchestration engine coordinating multiple AI agents for data discovery and ETL pipeline generation across environments.</li>
-          <li>Integrated intelligent routing, human-in-the-loop approvals, and observability hooks.</li>
+          <li>Designed and developed a production-grade multi-agent orchestration engine for data discovery and ETL automation.</li>
+          <li>Reduced platform onboarding effort & enabled autonomous workflow generation.</li>
         </ul>
         <div class="tech-stack">
           Stack: LangChain, LangGraph, FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry
@@ -449,7 +445,7 @@
         <div class="project-title">Finance Data Lakehouse &amp; ETL Engine</div>
         <ul class="bullets">
           <li>Built the core ETL engine enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&amp;A workloads.</li>
-          <li>Delivered batch + streaming pipelines supporting 100M+ monthly records.</li>
+          <li>Collaborated with architects to define platform roadmap aiming to support 100M+ monthly records.</li>
         </ul>
         <div class="tech-stack">
           Stack: PySpark, Kafka, Airflow, Apache Hudi, DataProc, BigQuery
@@ -457,20 +453,9 @@
       </div>
 
       <div class="project">
-        <div class="project-title">Centralized Logging &amp; Audit Platform</div>
-        <ul class="bullets">
-          <li>Designed SDK and data models to instrument lineage and failure tracking across pipelines.</li>
-          <li>Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.</li>
-        </ul>
-        <div class="tech-stack">
-          Stack: PostgreSQL, OpenTelemetry, OpenLineage
-        </div>
-      </div>
-
-      <div class="project">
         <div class="project-title">Unified Data Ingestion Web Service</div>
         <ul class="bullets">
-          <li>Built ingestion &amp; consumption APIs with multi-cloud support, enabling connectivity to data lakes and warehouse storage systems.</li>
+          <li>Built highly available & fault-tolerant APIs for data ingestion & consumption, enabling connectivity to data lakes and warehouse storage systems.</li>
           <li>Reduced production incidents by 80% and improved test coverage to &gt;90%.</li>
         </ul>
         <div class="tech-stack">
@@ -483,10 +468,10 @@
       <h2 class="section-title">Additional Projects</h2>
 
       <div class="project">
-        <div class="project-title">AI-Driven Textile Workflow Manager</div>
+        <div class="project-title">AI-Driven Textile Workflow Manager (Independent)</div>
         <ul class="bullets">
-          <li>Built a real-time order management system for factory operations and customer support.</li>
-          <li>Integrated Gmail + Gemini AI agent to extract order context and auto-respond to emails.</li>
+          <li>Built a real-time order workflow management & AI-powered customer support system for textile ops.</li>
+          <li>Demonstrated ability to build applied AI products beyond enterprise domain.</li>
         </ul>
         <div class="tech-stack">
           Stack: Flask, SocketIO, SQLAlchemy, SQLite, Gmail API, Google Gemini
@@ -494,7 +479,7 @@
       </div>
 
       <div class="project">
-        <div class="project-title">Custom Index Builder &amp; Analytics Engine</div>
+        <div class="project-title">Custom Index Builder &amp; Analytics Engine (Independent)</div>
         <ul class="bullets">
           <li>Full-stack solution for constructing stock indices, automated ingestion, performance analytics, and export workflows.</li>
           <li>Added modular architecture, Redis caching, FastAPI APIs and Docker packaging.</li>
@@ -503,12 +488,24 @@
           Stack: FastAPI, Redis, Pandas, SQLite, Docker
         </div>
       </div>
+
+      <div class="project">
+        <div class="project-title">Centralized Logging &amp; Audit SDK</div>
+        <ul class="bullets">
+          <li>Designed SDK and data models to instrument lineage and failure tracking across pipelines.</li>
+          <li>Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Python, PostgreSQL, OpenTelemetry, OpenLineage, Airflow, PySpark
+        </div>
+      </div>
+
     </section>
 
     <section class="section">
       <h2 class="section-title">Education</h2>
       <div class="education-entry">
-        <div class="school"><strong>Indian Institute of Technology (BHU), Varanasi</strong></div>
+        <div class="school">Indian Institute of Technology (BHU), Varanasi</div>
         <div class="degree">B.Tech in Electronics Engineering | 2018 - 2022</div>
       </div>
     </section>
@@ -523,11 +520,11 @@
     <section class="section">
       <h2 class="section-title">Interests</h2>
       <div class="list-inline">
-        <span>AI systems</span>
-        <span>automation platforms</span>
-        <span>trading analytics</span>
-        <span>distributed systems</span>
-        <span>writing technical blogs</span>
+        <span>Automation Platforms</span>
+        <span>Trading Systems</span>
+        <span>Agentic AI</span>
+        <span>Applied Distributed Computing</span>
+        <span>Technical Content Writing</span>
       </div>
     </section>
   </div>

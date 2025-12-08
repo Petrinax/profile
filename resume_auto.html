@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piyush Upreti - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #0f172a;   /* deep navy */
+      --accent:  #3b82f6;   /* blue accent */
+      --bg:      #f9fafb;
+      --text:    #111827;
+      --muted:   #4b5563;
+      --border:  #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 16px auto;
+      padding: 24px 28px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+      border-radius: 8px;
+      border-top: 4px solid var(--accent);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 6px;
+<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .meta-row {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .meta-row span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+      border-left: 1px solid var(--muted)
+    }
+
+    .links {
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3px;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding: 0 6px;
+  border-right: 1px solid var(--border);
+    }
+
+    .links a:last-child {
+  border-right: none;
+}
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    h2.section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 14px 0 6px;
+<!--      display: inline-flex;-->
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+
+<!--    h2.section-title::before {-->
+<!--      content: "";-->
+<!--      width: 24px;-->
+<!--      height: 2px;-->
+<!--      border-radius: 999px;-->
+<!--      background: linear-gradient(to right, var(&#45;&#45;accent), var(&#45;&#45;primary));-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+
+    .section {
+      gap: 6px;
+<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      margin: 0 0 5px;
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 6px 20px;
+      font-size: 12px;
+    }
+
+    .skill-line strong {
+      color: var(--primary);
+    }
+
+    .experience-role {
+      margin-top: 8px;
+      padding: 6px 6px;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .role-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    .role-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .company-line {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    ul.bullets {
+      margin: 5px 0 3px 18px;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    ul.bullets li {
+      margin-bottom: 3px;
+    }
+
+    .tech-stack {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-style: italic;
+    }
+
+    .project {
+      margin-top: 6px;
+      padding-top: 6px;
+
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--primary);
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .education-entry {
+      font-size: 12px;
+    }
+
+    .education-entry .school {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .education-entry .degree {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .list-inline {
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .list-inline span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+    }
+
+    /* Print styling for 2-page PDF */
+    @media print {
+      body {
+        background: #ffffff;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0 auto;
+        border-radius: 0;
+        max-width: 100%;
+        padding: 10mm 12mm !important;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    /* Download button styling */
+    .download-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .download-btn:hover {
+      background: var(--primary);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media print {
+      .download-btn {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="download-btn" onclick="downloadPDF()" aria-label="Download Resume as PDF">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+    Download PDF
+  </button>
+
+  <div id="resume-container" class="page">
+    <!-- Content will be dynamically loaded here -->
+  </div>
+
+  <script>
+    function downloadPDF() {
+      window.print();
+    }
+
+    // Markdown parser and renderer
+    async function loadResume() {
+      try {
+        const response = await fetch('resume.md');
+        const markdown = await response.text();
+        const resumeData = parseMarkdown(markdown);
+        renderResume(resumeData);
+      } catch (error) {
+        console.error('Error loading resume:', error);
+        document.getElementById('resume-container').innerHTML =
+          '<p style="color: red; padding: 20px;">Error loading resume data. Please ensure resume.md is in the same directory.</p>';
+      }
+    }
+
+    function parseMarkdown(markdown) {
+      const lines = markdown.split('\n');
+      const data = {
+        name: '',
+        title: '',
+        contact: {},
+        links: [],
+        summary: [],
+        skills: [],
+        experience: [],
+        keyProjects: [],
+        additionalProjects: [],
+        education: {},
+        honors: [],
+        interests: []
+      };
+
+      let currentSection = '';
+      let currentExperience = null;
+      let currentProject = null;
+      let i = 0;
+
+      while (i < lines.length) {
+        const line = lines[i].trim();
+
+        // Name (# heading)
+        if (line.startsWith('# ')) {
+          data.name = line.replace('# ', '').trim();
+        }
+        // Title (bold text after name)
+        else if (line.startsWith('**') && !data.title && line.endsWith('**')) {
+          data.title = line.replace(/\*\*/g, '').trim();
+        }
+        // Contact info
+        else if (line.startsWith('**Location:**')) {
+          data.contact.location = line.replace('**Location:**', '').replace(/\\/g, '').trim();
+        }
+        else if (line.startsWith('**Email:**')) {
+          data.contact.email = line.replace('**Email:**', '').replace(/\\/g, '').trim();
+        }
+        else if (line.startsWith('**Phone:**')) {
+          data.contact.phone = line.replace('**Phone:**', '').replace(/\\/g, '').trim();
+        }
+        // Links
+        else if (line.includes('[LinkedIn]') || line.includes('[GitHub]') || line.includes('[Medium]')) {
+          const linkMatches = line.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g);
+          for (const match of linkMatches) {
+            data.links.push({ text: match[1], url: match[2] });
+          }
+        }
+        // Section headers (## heading)
+        else if (line.startsWith('## ')) {
+          // Push current experience or project before changing section
+          if (currentExperience) {
+            data.experience.push(currentExperience);
+            currentExperience = null;
+          }
+          if (currentProject) {
+            if (currentSection === 'KEY PROJECTS') {
+              data.keyProjects.push(currentProject);
+            } else if (currentSection === 'ADDITIONAL PROJECTS') {
+              data.additionalProjects.push(currentProject);
+            }
+            currentProject = null;
+          }
+          currentSection = line.replace('## ', '').trim();
+        }
+        // Experience role (### heading)
+        else if (line.startsWith('### ') && currentSection === 'PROFESSIONAL EXPERIENCE') {
+          if (currentExperience) {
+            data.experience.push(currentExperience);
+          }
+          currentExperience = {
+            title: line.replace('### ', '').trim(),
+            company: '',
+            date: '',
+            bullets: [],
+            techStack: ''
+          };
+        }
+        // Project title (### heading)
+        else if (line.startsWith('### ') && (currentSection === 'KEY PROJECTS' || currentSection === 'ADDITIONAL PROJECTS')) {
+          if (currentProject) {
+            if (currentSection === 'KEY PROJECTS') {
+              data.keyProjects.push(currentProject);
+            } else {
+              data.additionalProjects.push(currentProject);
+            }
+          }
+          currentProject = {
+            title: line.replace('### ', '').trim(),
+            bullets: [],
+            techStack: ''
+          };
+        }
+        // Content based on current section
+        else if (line) {
+          if (currentSection === 'PROFILE SUMMARY') {
+            if (!line.startsWith('**') && line.length > 10) {
+              data.summary.push(line);
+            }
+          }
+          else if (currentSection === 'SKILLS') {
+            if (line.startsWith('**')) {
+              data.skills.push(line);
+            }
+          }
+          else if (currentSection === 'PROFESSIONAL EXPERIENCE' && currentExperience) {
+            if (line.includes(' | ') && !currentExperience.company) {
+              const parts = line.split(' | ');
+              currentExperience.company = parts[0].trim();
+              currentExperience.location = parts[1] ? parts[1].trim() : '';
+              currentExperience.date = parts[2] ? parts[2].trim() : '';
+            }
+            else if (line.startsWith('- ')) {
+              currentExperience.bullets.push(line.replace('- ', '').trim());
+            }
+            else if (line.startsWith('**Tech Stack:**')) {
+              currentExperience.techStack = line.replace('**Tech Stack:**', '').trim();
+            }
+          }
+          else if ((currentSection === 'KEY PROJECTS' || currentSection === 'ADDITIONAL PROJECTS') && currentProject) {
+            if (line.startsWith('- ')) {
+              currentProject.bullets.push(line.replace('- ', '').trim());
+            }
+            else if (line.startsWith('**Stack:**')) {
+              currentProject.techStack = line.replace('**Stack:**', '').trim();
+            }
+          }
+          else if (currentSection === 'EDUCATION') {
+            if (line.startsWith('**')) {
+              data.education.school = line.replace(/\*\*/g, '').trim();
+            } else if (line.includes('|')) {
+              const parts = line.split('|');
+              data.education.degree = parts[0].trim();
+              data.education.year = parts[1] ? parts[1].trim() : '';
+            }
+          }
+          else if (currentSection === 'HONORS & ACHIEVEMENTS') {
+            if (line.startsWith('- ')) {
+              data.honors.push(line.replace('- ', '').trim());
+            }
+          }
+          else if (currentSection === 'INTERESTS') {
+            if (line && !line.startsWith('#')) {
+              const interests = line.split(',').map(s => s.trim()).filter(s => s);
+              data.interests.push(...interests);
+            }
+          }
+        }
+
+        i++;
+      }
+
+      // Push last experience or project
+      if (currentExperience) {
+        data.experience.push(currentExperience);
+      }
+      if (currentProject) {
+        if (currentSection === 'KEY PROJECTS') {
+          data.keyProjects.push(currentProject);
+        } else {
+          data.additionalProjects.push(currentProject);
+        }
+      }
+
+      return data;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function formatText(text) {
+      // Convert **text** to <strong>text</strong>
+      return text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }
+
+    function renderResume(data) {
+      const container = document.getElementById('resume-container');
+
+      let html = `
+        <header>
+          <div class="name">${escapeHtml(data.name)}</div>
+          <div class="title">${escapeHtml(data.title)}</div>
+          <div class="meta-row">
+            ${data.contact.location ? `<span>${escapeHtml(data.contact.location)}</span>` : ''}
+            ${data.contact.email ? `<span>Email: ${escapeHtml(data.contact.email)}</span>` : ''}
+            ${data.contact.phone ? `<span>Phone: ${escapeHtml(data.contact.phone)}</span>` : ''}
+          </div>
+          <div class="links">
+            ${data.links.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.text)}</a>`).join('')}
+          </div>
+        </header>
+
+        <section class="section">
+          <h2 class="section-title">Profile Summary</h2>
+          <div class="summary">
+            ${data.summary.map(p => `<p>${formatText(escapeHtml(p))}</p>`).join('')}
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            ${data.skills.map(skill => {
+              const [label, ...rest] = skill.split(':');
+              const content = rest.join(':');
+              return `<div class="skill-line">${formatText(escapeHtml(label))}:${escapeHtml(content)}</div>`;
+            }).join('')}
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Professional Experience</h2>
+          ${data.experience.map(exp => `
+            <div class="experience-role">
+              <div class="role-header">
+                <div>
+                  <div class="role-title">${escapeHtml(exp.title)}</div>
+                  <div class="company-line">${escapeHtml(exp.company)}${exp.location ? ' | ' + escapeHtml(exp.location) : ''}</div>
+                </div>
+                <div class="role-meta">${escapeHtml(exp.date)}</div>
+              </div>
+              <ul class="bullets">
+                ${exp.bullets.map(bullet => `<li>${formatText(escapeHtml(bullet))}</li>`).join('')}
+              </ul>
+              ${exp.techStack ? `<div class="tech-stack">Tech Stack: ${escapeHtml(exp.techStack)}</div>` : ''}
+            </div>
+          `).join('')}
+        </section>
+
+        <section class="section page-break">
+          <h2 class="section-title">Key Projects</h2>
+          ${data.keyProjects.map(proj => `
+            <div class="project">
+              <div class="project-title">${escapeHtml(proj.title)}</div>
+              <ul class="bullets">
+                ${proj.bullets.map(bullet => `<li>${formatText(escapeHtml(bullet))}</li>`).join('')}
+              </ul>
+              ${proj.techStack ? `<div class="tech-stack">Stack: ${escapeHtml(proj.techStack)}</div>` : ''}
+            </div>
+          `).join('')}
+        </section>
+
+        ${data.additionalProjects.length > 0 ? `
+        <section class="section">
+          <h2 class="section-title">Additional Projects</h2>
+          ${data.additionalProjects.map(proj => `
+            <div class="project">
+              <div class="project-title">${escapeHtml(proj.title)}</div>
+              <ul class="bullets">
+                ${proj.bullets.map(bullet => `<li>${formatText(escapeHtml(bullet))}</li>`).join('')}
+              </ul>
+              ${proj.techStack ? `<div class="tech-stack">Stack: ${escapeHtml(proj.techStack)}</div>` : ''}
+            </div>
+          `).join('')}
+        </section>
+        ` : ''}
+
+        ${data.education.school ? `
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="education-entry">
+            <div class="school"><strong>${escapeHtml(data.education.school)}</strong></div>
+            <div class="degree">${escapeHtml(data.education.degree)} | ${escapeHtml(data.education.year)}</div>
+          </div>
+        </section>
+        ` : ''}
+
+        ${data.honors.length > 0 ? `
+        <section class="section">
+          <h2 class="section-title">Honors &amp; Achievements</h2>
+          <div class="list-inline">
+            ${data.honors.map(honor => `<span>${escapeHtml(honor)}</span>`).join('')}
+          </div>
+        </section>
+        ` : ''}
+
+        ${data.interests.length > 0 ? `
+        <section class="section">
+          <h2 class="section-title">Interests</h2>
+          <div class="list-inline">
+            ${data.interests.map(interest => `<span>${escapeHtml(interest)}</span>`).join('')}
+          </div>
+        </section>
+        ` : ''}
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // Load resume on page load
+    document.addEventListener('DOMContentLoaded', loadResume);
+  </script>
+</body>
+</html>

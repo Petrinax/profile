@@ -8,24 +8,19 @@
 [LinkedIn](https://www.linkedin.com/in/piyush-upreti) | [GitHub](https://github.com/Petrinax) | [Medium](https://medium.com/@piyushupreti07)
 
 ## PROFILE SUMMARY
-
-Software Developer & Data Engineer with experience building platforms, orchestration engines, AI-driven automations, and data systems at enterprise scale. Proven ability in system design, distributed computing, and delivering cloud-native products across business domains.
-
-Drives technical execution, collaborates with cross-functional stakeholders, mentors engineers, and ships reliable systems with measurable outcomes. Experienced in building high-availability platforms, optimizing observability, and enabling intelligent automation powered by AI agents.
+Software Developer with experience building **Data Platforms** and **Backend Services**, leveraging **Agentic AI systems** for workflow automation. Demonstrated expertise in system design, distributed computing, and building scalable cloud-native platforms adopted across business domains.
 
 ## SKILLS
 
-**Languages & Frameworks:** Python, SQL, Flask, FastAPI, Django, PySpark, Pandas, JavaScript, C/C++
+**Languages & Frameworks:** Python, SQL, Flask, FastAPI, Django, PySpark, Pandas
 
-**Data & Platforms:** Azure, Google Cloud, PostgreSQL, Redis, BigQuery, Airflow, Kafka, DataProc, Databricks, Kubernetes
+**Data & Platforms:** Google Cloud, Azure, Databricks, BigQuery, DataProc, Airflow, Kafka, PostgreSQL, Redis, Kubernetes, Docker
 
-**DevOps & Observability:** Docker, Prometheus, Grafana, Istio, OpenTelemetry
+**Observability & Monitoring:** Grafana, Prometheus, Istio, OpenTelemetry, OpenLineage
 
-**AI & Automation Tools:** LangChain, LangGraph, Phoenix Tracing, Enterprise LLM Gateways, Google Gemini, OpenAI GPTs
+**AI & Automation Tools:** LangChain, LangGraph, OTel-based monitoring , Enterprise LLM Gateways
 
-**Core Engineering:** Microservices, Distributed Systems, Agentic AI, Data Structures & Algorithms, Problem Solving
-
-**Professional Skills:** Architectural thinking, Communication, Adaptability, Cross-Functional Collaboration
+**System Concepts:** Microservices, Distributed Systems, Data Structures & Algorithms, streaming workloads, ETL pipelines, cloud-native architecture
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -33,10 +28,10 @@ Drives technical execution, collaborates with cross-functional stakeholders, men
 
 Walmart Global Tech India | Bengaluru | Sept 2024 - Present
 
-- Built a **Multi-Agent Orchestration Platform** automating pipeline generation and deployment using natural language, **reducing manual development by 80%.**
+- Built a **Multi-Agent Orchestration Service** simplifying pipeline generation and deployment using natural language, **reducing manual development by 80%.**
 - Co-authored design documents and **led delivery across four backend teams.**
-- Developed the ETL engine powering the Finance Data Lakehouse, enabling **20+ business domains to onboard data and process 100M+ records/month.**
-- Designed a Centralized Logging and Audit Platform with lineage, quarantine tracking, and pipeline health visibility, **improving incident resolution time by 50%.**
+- Developed the Core ETL engine powering the Finance Data Lakehouse, enabling **20+ business domains to onboard data and process 100M+ records/month.**
+- Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, **improving incident resolution time by 50%.**
 
 **Tech Stack:** LangChain, LangGraph, FastAPI, PySpark, Kafka, BigQuery, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage
 
@@ -63,28 +58,28 @@ Walmart Global Tech India | Bengaluru | May 2021 - July 2021
 
 ### AI-Powered Multi-Agent Data Platform
 
-- Designed and deployed a production-grade orchestration engine coordinating multiple AI agents for data discovery and ETL pipeline generation across environments.
-- Integrated intelligent routing, human-in-the-loop approvals, and observability hooks.
+- Designed and developed a production-grade multi-agent orchestration engine for data discovery and ETL automation.
+- Reduced platform onboarding effort & enabled autonomous workflow generation.
 
 **Stack:** LangChain, LangGraph, FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry
 
 ### Finance Data Lakehouse & ETL Engine
 
 - Built the core ETL engine enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&A workloads.
-- Delivered batch + streaming pipelines supporting 100M+ monthly records.
+- Collaborated with architects to define platform roadmap aiming to support 100M+ monthly records.
 
 **Stack:** PySpark, Kafka, Airflow, Apache Hudi, DataProc, BigQuery
 
-### Centralized Logging & Audit Platform
+### Centralized Logging & Audit SDK
 
 - Designed SDK and data models to instrument lineage and failure tracking across pipelines.
 - Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.
 
-**Stack:** PostgreSQL, OpenTelemetry, OpenLineage
+**Stack:** Python, PostgreSQL, OpenTelemetry, OpenLineage, Airflow, PySpark
 
 ### Unified Data Ingestion Web Service
 
-- Built ingestion & consumption APIs with multi-cloud support, enabling connectivity to data lakes and warehouse storage systems.
+- Built highly available & fault-tolerant APIs for data ingestion & consumption, enabling connectivity to data lakes and warehouse storage systems.
 - Reduced production incidents by 80% and improved test coverage to >90%.
 
 **Stack:** Flask, Kubernetes, Docker, Google Cloud, Azure, BigQuery, Akeyless
@@ -93,8 +88,8 @@ Walmart Global Tech India | Bengaluru | May 2021 - July 2021
 
 ### AI-Driven Textile Workflow Manager (Independent)
 
-- Built a real-time order management system for factory operations and customer support.
-- Integrated Gmail + Gemini AI agent to extract order context and auto-respond to emails.
+- Built a real-time order workflow management & AI-powered customer support system for textile ops.
+- Demonstrated ability to build applied AI products beyond enterprise domain.
 
 **Stack:** Flask, SocketIO, SQLAlchemy, SQLite, Gmail API, Google Gemini
 
@@ -116,5 +111,5 @@ B.Tech in Electronics Engineering | 2018 - 2022
 
 ## INTERESTS
 
-AI systems, automation platforms, trading analytics, distributed systems, writing technical blogs
+Automation Platforms, Trading Systems, Agentic AI, Applied Distributed Computing, Technical Content Writing
 
