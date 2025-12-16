@@ -138,6 +138,13 @@
       font-size: 12px;
     }
 
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+    }
+
     .skill-line strong {
       color: var(--text);
     }
@@ -346,14 +353,14 @@
 
     <section class="section">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
+      <div class="skills-list">
         <div class="skill-line">
           <strong>Languages & Frameworks:</strong>
           Python, SQL, Flask, FastAPI, Django, PySpark, Pandas
         </div>
         <div class="skill-line">
           <strong>Data & Platforms:</strong>
-          PostgreSQL, Kubernetes, Docker, , Airflow, Kafka, Databricks, BigQuery, DataProc, Google Cloud, Azure
+          PostgreSQL, Kubernetes, Docker, Airflow, Kafka, Databricks, BigQuery, DataProc, Google Cloud, Azure
         </div>
         <div class="skill-line">
           <strong>Observability & Monitoring:</strong>
@@ -382,7 +389,7 @@
           <div class="role-meta">Sept 2024 - Present</div>
         </div>
         <ul class="bullets">
-          <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains to onboard data and process 100M+ records/month.</strong></li>
+          <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains</strong> to onboard data and <strong>process 100M+ records/month.</strong></li>
           <li>Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, <strong>improving incident resolution time by 50%.</strong></li>
           <li>Built a multi-agent orchestration service simplifying pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
           <li>Co-authored design documents and <strong>led delivery across four backend teams.</strong></li>
