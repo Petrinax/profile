@@ -8,19 +8,19 @@
 [LinkedIn](https://www.linkedin.com/in/piyush-upreti) | [GitHub](https://github.com/Petrinax) | [Medium](https://medium.com/@piyushupreti07)
 
 ## PROFILE SUMMARY
-Software Developer with experience building **Data Platforms** and **Backend Services**, leveraging **Agentic AI systems** for workflow automation. Demonstrated expertise in system design, distributed computing, and building scalable cloud-native platforms adopted across business domains.
+Software Developer with experience building **Data Platforms** and **Backend Services**. Demonstrated expertise in system design, distributed computing, and building scalable cloud-native platforms adopted across business domains. Leveraging AI and automation tools to enhance developer productivity and streamline data workflows.
 
 ## SKILLS
 
 **Languages & Frameworks:** Python, SQL, Flask, FastAPI, Django, PySpark, Pandas
 
-**Data & Platforms:** Google Cloud, Azure, Databricks, BigQuery, DataProc, Airflow, Kafka, PostgreSQL, Redis, Kubernetes, Docker
+**Data & Platforms:** PostgreSQL, Kubernetes, Docker, Google Cloud, Azure, Databricks, BigQuery, DataProc,Redis, Airflow, Kafka 
 
 **Observability & Monitoring:** Grafana, Prometheus, Istio, OpenTelemetry, OpenLineage
 
-**AI & Automation Tools:** LangChain, LangGraph, OTel-based monitoring , Enterprise LLM Gateways
+**AI & Automation Tools:** LangChain, LangGraph, OTel-based monitoring
 
-**System Concepts:** Microservices, Distributed Systems, Data Structures & Algorithms, streaming workloads, ETL pipelines, cloud-native architecture
+**System Concepts:** Microservices, Distributed Systems, Data Structures & Algorithms
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -28,12 +28,12 @@ Software Developer with experience building **Data Platforms** and **Backend Ser
 
 Walmart Global Tech India | Bengaluru | Sept 2024 - Present
 
-- Built a **Multi-Agent Orchestration Service** simplifying pipeline generation and deployment using natural language, **reducing manual development by 80%.**
-- Co-authored design documents and **led delivery across four backend teams.**
 - Developed the Core ETL engine powering the Finance Data Lakehouse, enabling **20+ business domains to onboard data and process 100M+ records/month.**
-- Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, **improving incident resolution time by 50%.**
+- Designed a Centralized Logging and Audit plugin with lineage and quarantine tracing, **improving incident resolution time by 50%.**
+- Built a multi-agent orchestration service simplifying pipeline generation and deployment using natural language, **reducing manual development by 80%.**
+- Co-authored design documents and **led delivery across four backend teams.**
 
-**Tech Stack:** LangChain, LangGraph, FastAPI, PySpark, Kafka, BigQuery, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage
+**Tech Stack:** FastAPI, PySpark, Postgres, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage, LangChain
 
 ### Software Engineer II
 
@@ -56,26 +56,13 @@ Walmart Global Tech India | Bengaluru | May 2021 - July 2021
 
 ## KEY PROJECTS
 
-### AI-Powered Multi-Agent Data Platform
+### Finance Data Lakehouse
 
-- Designed and developed a production-grade multi-agent orchestration engine for data discovery and ETL automation.
-- Reduced platform onboarding effort & enabled autonomous workflow generation.
-
-**Stack:** LangChain, LangGraph, FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry
-
-### Finance Data Lakehouse & ETL Engine
-
-- Built the core ETL engine enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&A workloads.
+- Built the core ETL engine for data lakehouse enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&A workloads.
 - Collaborated with architects to define platform roadmap aiming to support 100M+ monthly records.
 
 **Stack:** PySpark, Kafka, Airflow, Apache Hudi, DataProc, BigQuery
 
-### Centralized Logging & Audit SDK
-
-- Designed SDK and data models to instrument lineage and failure tracking across pipelines.
-- Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.
-
-**Stack:** Python, PostgreSQL, OpenTelemetry, OpenLineage, Airflow, PySpark
 
 ### Unified Data Ingestion Web Service
 
@@ -83,6 +70,20 @@ Walmart Global Tech India | Bengaluru | May 2021 - July 2021
 - Reduced production incidents by 80% and improved test coverage to >90%.
 
 **Stack:** Flask, Kubernetes, Docker, Google Cloud, Azure, BigQuery, Akeyless
+
+### Centralized Logging & Audit Plugin
+
+- Designed SDK and data models to instrument lineage and failure tracking across pipelines.
+- Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.
+
+**Stack:** Python, PostgreSQL, OpenTelemetry, OpenLineage, Airflow, PySpark
+
+### Multi-Agent Orchestration Service
+
+- Designed and developed an Ai-powered multi-agent orchestration engine for data discovery and ETL automation.
+- Reduced platform onboarding effort & enabled autonomous workflow generation.
+
+**Stack:** FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry, LangChain 
 
 ## ADDITIONAL PROJECTS
 
@@ -111,5 +112,5 @@ B.Tech in Electronics Engineering | 2018 - 2022
 
 ## INTERESTS
 
-Automation Platforms, Trading Systems, Agentic AI, Applied Distributed Computing, Technical Content Writing
+Trading Systems, Agentic AI, Applied Distributed Computing, Technical Content Writing
 
