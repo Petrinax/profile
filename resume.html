@@ -246,7 +246,7 @@
         padding: 0 !important;
       }
       header {
-      gap: 0;
+        gap: 0;
         padding-bottom: 0;
         margin-bottom: 0;
       }
@@ -255,7 +255,7 @@
         margin: 0 auto;
         border-radius: 0;
         max-width: 100%;
-        padding: 3mm 12mm !important;
+        padding: 3mm 10mm !important;
       }
       a {
         text-decoration: none;
@@ -265,8 +265,14 @@
         page-break-before: always;
         break-before: page;
       }
+      /* Prevent awkward breaks and add spacing */
+
+      .experience-role, .project {
+        page-break-inside: avoid;
+      }
       h2.section-title {
-      margin: 6px 0 6px;
+        margin: 6px 0 6px;
+        page-break-after: avoid;
       }
       .skills-list {
         gap: 6px;
@@ -275,7 +281,7 @@
 
     @page {
       size: A4;
-      margin: 0;
+      margin: 3mm;
     }
 
     /* Download button styling */
