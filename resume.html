@@ -101,7 +101,7 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       margin: 14px 0 6px;
-<!--      display: inline-flex;-->
+      /* display: inline-flex; */
       align-items: center;
       gap: 8px;
       font-weight: 600;
@@ -109,19 +109,19 @@
       border-bottom: 1px solid var(--border);
     }
 
-<!--    h2.section-title::before {-->
-<!--      content: "";-->
-<!--      width: 24px;-->
-<!--      height: 2px;-->
-<!--      border-radius: 999px;-->
-<!--      background: linear-gradient(to right, var(&#45;&#45;accent), var(&#45;&#45;primary));-->
-<!--      display: inline-block;-->
-<!--    }-->
+    /* h2.section-title::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--primary));
+      display: inline-block;
+    } */
 
 
     .section {
       gap: 6px;
-<!--      border-bottom: 1px solid var(&#45;&#45;border);-->
+      /* border-bottom: 1px solid var(--border); */
       padding-bottom: 10px;
       margin-bottom: 10px;
     }
@@ -373,7 +373,7 @@
       <div class="skills-list">
         <div class="skill-line">
           <strong>Languages & Frameworks:</strong>
-          Python, SQL, Flask, FastAPI, Django, PySpark, Pandas
+          Python, SQL, Java, Spring Boot, Flask, FastAPI, Django, Spark, PySpark, Pandas
         </div>
         <div class="skill-line">
           <strong>Data & Platforms:</strong>
@@ -400,16 +400,34 @@
       <div class="experience-role">
         <div class="role-header">
           <div>
+            <div class="role-title">Software Engineer</div>
+            <div class="company-line">Navi Technologies | Bengaluru</div>
+          </div>
+          <div class="role-meta">Feb 2026 - Present</div>
+        </div>
+        <ul class="bullets">
+          <li>Fixed a critical scheduler bug impacting <strong>~2,000 Hudi ingestion pipelines</strong> by delivering end-to-end <strong>Spring Boot API</strong>, database, and trigger-logic changes with <strong>&lt;30 min downtime</strong> and zero failures.</li>
+          <li>Implemented <strong>team-scoped RBAC</strong> and backend API enhancements, improving platform security and DAG access management at scale.</li>
+          <li>Led Airflow v2 to v3 migration across <strong>7 repositories (92+ PRs)</strong>, reducing workflow failures from <strong>~10% to &lt;1%</strong>.</li>
+          <li>Completed <strong>3 on-call rotations in 4 months</strong>, resolving production incidents across distributed backend services, CDC pipelines, and Kubernetes-hosted workloads.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: Java, Spring Boot, PostgreSQL, REST APIs, Airflow, Kubernetes, Apache Hudi, Debezium
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
             <div class="role-title">Software Engineer III</div>
             <div class="company-line">Walmart Global Tech India | Bengaluru</div>
           </div>
-          <div class="role-meta">Sept 2024 - Present</div>
+          <div class="role-meta">Sept 2024 - Jan 2026</div>
         </div>
         <ul class="bullets">
           <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains</strong> to onboard data and <strong>process 100M+ records/month.</strong></li>
           <li>Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, <strong>improving incident resolution time by 50%.</strong></li>
           <li>Built a multi-agent orchestration service simplifying pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
-          <li>Co-authored design documents and <strong>led delivery across four backend teams.</strong></li>
         </ul>
         <div class="tech-stack">
           Tech Stack: FastAPI, PySpark, Postgres, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage, LangChain
@@ -456,6 +474,16 @@
 <!--    <section class="section page-break">-->
     <section class="section">
       <h2 class="section-title">Key Projects</h2>
+
+      <div class="project">
+        <div class="project-title">Data Ingestion Service (Navi)</div>
+        <ul class="bullets">
+          <li>Diagnosed and resolved a critical scheduler bug impacting <strong>~2,000 active Hudi ingestion pipelines</strong> in a multi-cloud production setup.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Java, Spring Boot, PostgreSQL, Airflow, Apache Hudi, Kubernetes, Debezium
+        </div>
+      </div>
 
       <div class="project">
         <div class="project-title">Finance Data Lakehouse</div>
@@ -509,7 +537,6 @@
         <div class="project-title">AI-Driven Textile Workflow Manager (Independent)</div>
         <ul class="bullets">
           <li>Built a real-time order workflow management & AI-powered customer support system for textile ops.</li>
-          <li>Demonstrated ability to build applied AI products beyond enterprise domain.</li>
         </ul>
         <div class="tech-stack">
           Stack: Flask, SocketIO, SQLAlchemy, SQLite, Gmail API, Google Gemini
@@ -520,7 +547,6 @@
         <div class="project-title">Custom Index Builder &amp; Analytics Engine (Independent)</div>
         <ul class="bullets">
           <li>Full-stack solution for constructing stock indices, automated ingestion, performance analytics, and export workflows.</li>
-          <li>Added modular architecture, Redis caching, FastAPI APIs and Docker packaging.</li>
         </ul>
         <div class="tech-stack">
           Stack: FastAPI, Redis, Pandas, SQLite, Docker
