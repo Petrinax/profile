@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Piyush Upreti | Software Developer & Data Engineer</title>
+<meta name="description" content="Piyush Upreti — Software Developer & Data Engineer building scalable data platforms, backend services, and AI-powered automation." />
+<meta name="theme-color" content="#0f172a" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Piyush Upreti | Software Developer & Data Engineer" />
+<meta property="og:description" content="Building scalable data platforms, backend services, and AI-powered automation." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://piyushupreti.com" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%233b82f6' font-family='Arial, sans-serif' font-weight='700'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="#home" class="logo">PU<span>.</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="btn btn-sm btn-primary" href="assets/Piyush-Upreti-Resume.pdf" download>Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Piyush Upreti</h1>
+        <p class="hero-role">
+          <span id="typedRole">Software Developer</span><span class="cursor">|</span>
+        </p>
+        <p class="hero-summary">
+          I design and build scalable <strong>data platforms</strong> and <strong>backend services</strong> —
+          with a focus on distributed systems, cloud-native infrastructure, and using AI &amp; automation
+          to make engineering teams faster.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+
+        <ul class="social-row" aria-label="Social links">
+          <li><a href="https://github.com/Petrinax" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.15 8.98 7.53 10.43.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.06.67-3.71-1.3-3.71-1.3-.5-1.28-1.22-1.62-1.22-1.62-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.19 3.2.91.1-.71.38-1.19.7-1.46-2.44-.28-5.01-1.22-5.01-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.93 0 0 .92-.3 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.43 3.02-1.13 3.02-1.13.6 1.53.22 2.65.11 2.93.7.77 1.13 1.75 1.13 2.95 0 4.22-2.58 5.15-5.03 5.42.39.34.74 1.02.74 2.05 0 1.48-.01 2.67-.01 3.03 0 .29.2.64.76.53A10.53 10.53 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/piyush-upreti" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          </a></li>
+          <li><a href="https://medium.com/@piyushupreti07" target="_blank" rel="noopener" aria-label="Medium">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 1 1-13.6 0 6.8 6.8 0 0 1 13.6 0zm7.42 0c0 3.54-1.52 6.42-3.4 6.42-1.88 0-3.4-2.88-3.4-6.42s1.52-6.42 3.4-6.42c1.88 0 3.4 2.87 3.4 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.57 1.19 5.75z"/></svg>
+          </a></li>
+          <li><a href="mailto:piyushupreti07@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="avatar-ring">
+          <div class="avatar-core">PU</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card"><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
+          <div class="stat-card"><span class="stat-num">100M+</span><span class="stat-label">Records / Month</span></div>
+          <div class="stat-card"><span class="stat-num">2000+</span><span class="stat-label">Pipelines Migrated</span></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">About Me</p>
+      <h2 class="section-title reveal">Building reliable data platforms at scale</h2>
+
+      <div class="about-grid">
+        <p class="about-text reveal">
+          I'm a Software Developer &amp; Data Engineer based in Bengaluru, India, currently working at
+          <strong>Walmart Global Tech</strong>. I specialize in building <strong>data platforms</strong> and
+          <strong>backend services</strong> — with hands-on expertise in system design, distributed computing,
+          and cloud-native architecture adopted across business domains. Lately, I've been focused on
+          leveraging AI and automation to enhance developer productivity and streamline data workflows.
+        </p>
+
+        <div class="about-facts reveal">
+          <div class="fact"><span class="fact-label">Location</span><span class="fact-value">Bengaluru, India</span></div>
+          <div class="fact"><span class="fact-label">Role</span><span class="fact-value">Software Engineer III</span></div>
+          <div class="fact"><span class="fact-label">Company</span><span class="fact-value">Walmart Global Tech</span></div>
+          <div class="fact"><span class="fact-label">Focus</span><span class="fact-value">Data Platforms · AI Automation</span></div>
+        </div>
+      </div>
+
+      <div class="highlight-grid reveal">
+        <div class="highlight-card">
+          <span class="highlight-num">20+</span>
+          <p>Business domains onboarded onto the Finance Data Lakehouse</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-num">50%</span>
+          <p>Faster incident resolution via centralized logging &amp; audit tracing</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-num">80%</span>
+          <p>Less manual development via multi-agent pipeline orchestration</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-num">90%+</span>
+          <p>Test coverage maintained across backend services shipped</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">Career</p>
+      <h2 class="section-title reveal">Professional Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Software Engineer III</h3>
+              <span class="timeline-date">Sept 2024 — Present</span>
+            </div>
+            <p class="timeline-org">Walmart Global Tech India · Bengaluru</p>
+            <ul>
+              <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains</strong> to onboard data and process <strong>100M+ records/month.</strong></li>
+              <li>Designed a Centralized Logging and Audit plugin with lineage and quarantine tracing, <strong>improving incident resolution time by 50%.</strong></li>
+              <li>Built a multi-agent orchestration service simplifying pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
+              <li>Co-authored design documents and <strong>led delivery across four backend teams.</strong></li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">FastAPI</span><span class="tag">PySpark</span><span class="tag">Postgres</span>
+              <span class="tag">Kubernetes</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+              <span class="tag">Istio</span><span class="tag">OpenTelemetry</span><span class="tag">OpenLineage</span><span class="tag">LangChain</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Software Engineer II</h3>
+              <span class="timeline-date">June 2022 — Aug 2024</span>
+            </div>
+            <p class="timeline-org">Walmart Global Tech India · Bengaluru</p>
+            <ul>
+              <li>Built <strong>event-driven ETL frameworks</strong> for fintech workloads, enhancing reliability and throughput.</li>
+              <li>Developed scalable Flask-based backend services achieving <strong>90%+ test coverage</strong> and <strong>95% code quality.</strong></li>
+              <li>Migrated <strong>2000+ pipelines</strong> to managed cloud infrastructure with <strong>zero downtime.</strong></li>
+              <li>Led peer reviews, enforced engineering best practices, and accelerated new hire onboarding.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Flask</span><span class="tag">PySpark</span><span class="tag">REST APIs</span>
+              <span class="tag">Azure</span><span class="tag">GCS</span><span class="tag">Databricks</span>
+              <span class="tag">SQL</span><span class="tag">BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Software Developer Intern</h3>
+              <span class="timeline-date">May 2021 — July 2021</span>
+            </div>
+            <p class="timeline-org">Walmart Global Tech India · Bengaluru</p>
+            <ul>
+              <li>Developed UI dashboards and backend logic for an HR automation web application.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">React</span><span class="tag">Redux</span><span class="tag">Node.js</span>
+              <span class="tag">TypeScript</span><span class="tag">CosmosDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">Portfolio</p>
+      <h2 class="section-title reveal">Key Projects</h2>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <h3>Finance Data Lakehouse</h3>
+          <p>Core ETL engine for a data lakehouse enabling multi-domain onboarding, runtime validations, data quality, and orchestration for FP&amp;A workloads. Designed to support 100M+ monthly records.</p>
+          <div class="tag-row"><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Airflow</span><span class="tag">Apache Hudi</span><span class="tag">DataProc</span><span class="tag">BigQuery</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Unified Data Ingestion Web Service</h3>
+          <p>Highly available &amp; fault-tolerant APIs for data ingestion &amp; consumption, connecting to data lakes and warehouse storage systems. Reduced production incidents by 80%.</p>
+          <div class="tag-row"><span class="tag">Flask</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">BigQuery</span><span class="tag">Akeyless</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Centralized Logging &amp; Audit Plugin</h3>
+          <p>SDK and data models to instrument lineage and failure tracking across pipelines. Delivered observability and quarantined-record traces for 1000+ pipelines.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">OpenTelemetry</span><span class="tag">OpenLineage</span><span class="tag">Airflow</span><span class="tag">PySpark</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Multi-Agent Orchestration Service</h3>
+          <p>AI-powered multi-agent orchestration engine for data discovery and ETL automation, reducing platform onboarding effort and enabling autonomous workflow generation.</p>
+          <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">Phoenix</span><span class="tag">Kubernetes</span><span class="tag">LLM Gateway</span><span class="tag">OpenTelemetry</span><span class="tag">LangChain</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>AI-Driven Textile Workflow Manager</h3>
+          <p class="badge-line"><span class="badge">Independent</span></p>
+          <p>Real-time order workflow management &amp; AI-powered customer support system for textile ops — demonstrating applied AI beyond the enterprise domain.</p>
+          <div class="tag-row"><span class="tag">Flask</span><span class="tag">SocketIO</span><span class="tag">SQLAlchemy</span><span class="tag">SQLite</span><span class="tag">Gmail API</span><span class="tag">Gemini</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Custom Index Builder &amp; Analytics Engine</h3>
+          <p class="badge-line"><span class="badge">Independent</span></p>
+          <p>Full-stack solution for constructing stock indices with automated ingestion, performance analytics, and export workflows, packaged with Docker.</p>
+          <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">Pandas</span><span class="tag">SQLite</span><span class="tag">Docker</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">Toolbox</p>
+      <h2 class="section-title reveal">Skills &amp; Technologies</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Languages &amp; Frameworks</h3>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">Django</span><span class="tag">PySpark</span><span class="tag">Pandas</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Data &amp; Platforms</h3>
+          <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Google Cloud</span><span class="tag">Azure</span><span class="tag">Databricks</span><span class="tag">BigQuery</span><span class="tag">DataProc</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">Kafka</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Observability &amp; Monitoring</h3>
+          <div class="tag-row"><span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">Istio</span><span class="tag">OpenTelemetry</span><span class="tag">OpenLineage</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>AI &amp; Automation</h3>
+          <div class="tag-row"><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">OTel-based Monitoring</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>System Concepts</h3>
+          <div class="tag-row"><span class="tag">Microservices</span><span class="tag">Distributed Systems</span><span class="tag">Data Structures &amp; Algorithms</span></div>
+        </div>
+      </div>
+
+      <div class="edu-honors reveal">
+        <div class="edu-card">
+          <h3>Education</h3>
+          <p><strong>Indian Institute of Technology (BHU), Varanasi</strong></p>
+          <p>B.Tech in Electronics Engineering · 2018 – 2022</p>
+        </div>
+        <div class="edu-card">
+          <h3>Honors &amp; Achievements</h3>
+          <p>AIR 2304 in IIT JEE (Advanced), 2018</p>
+        </div>
+        <div class="edu-card">
+          <h3>Interests</h3>
+          <p>Trading Systems, Agentic AI, Applied Distributed Computing, Technical Content Writing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <p class="section-eyebrow reveal">Get In Touch</p>
+      <h2 class="section-title reveal">Let's build something great together</h2>
+      <p class="contact-sub reveal">Open to interesting problems in data platforms, backend systems, and applied AI. Feel free to reach out.</p>
+
+      <div class="contact-grid reveal">
+        <a class="contact-card" href="mailto:piyushupreti07@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          <span>piyushupreti07@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+918765830338">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 87658 30338</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/piyush-upreti" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          <span>linkedin.com/in/piyush-upreti</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Petrinax" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.15 8.98 7.53 10.43.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.06.67-3.71-1.3-3.71-1.3-.5-1.28-1.22-1.62-1.22-1.62-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.19 3.2.91.1-.71.38-1.19.7-1.46-2.44-.28-5.01-1.22-5.01-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.93 0 0 .92-.3 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.43 3.02-1.13 3.02-1.13.6 1.53.22 2.65.11 2.93.7.77 1.13 1.75 1.13 2.95 0 4.22-2.58 5.15-5.03 5.42.39.34.74 1.02.74 2.05 0 1.48-.01 2.67-.01 3.03 0 .29.2.64.76.53A10.53 10.53 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+          <span>github.com/Petrinax</span>
+        </a>
+      </div>
+
+      <div class="contact-cta reveal">
+        <a href="mailto:piyushupreti07@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Piyush Upreti. Built with HTML, CSS &amp; JavaScript.</p>
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑ Top</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
