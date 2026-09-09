@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piyush Upreti - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #0f172a;   /* deep navy */
+      --accent:  #3b82f6;   /* blue accent */
+      --bg:      #f9fafb;
+      --text:    #111827;
+      --muted:   #4b5563;
+      --border:  #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 16px auto;
+      padding: 24px 28px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+      border-radius: 8px;
+      border-top: 4px solid var(--accent);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 6px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .meta-row {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .meta-row span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+      border-left: 1px solid var(--muted)
+    }
+
+    .links {
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3px;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding: 0 6px;
+  border-right: 1px solid var(--border);
+    }
+
+    .links a:last-child {
+  border-right: none;
+}
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    h2.section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 14px 0 6px;
+      /* display: inline-flex; */
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* h2.section-title::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--primary));
+      display: inline-block;
+    } */
+
+
+    .section {
+      gap: 6px;
+      /* border-bottom: 1px solid var(--border); */
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      margin: 0 0 5px;
+      color: var(--primary);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 6px 20px;
+      font-size: 12px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .skill-line strong {
+      color: var(--text);
+    }
+
+    .experience-role {
+      margin-top: 8px;
+      padding: 6px 6px;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .role-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    .role-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+      align-self: end;
+    }
+
+    .company-line {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    ul.bullets {
+      margin: 5px 0 3px 18px;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    ul.bullets li {
+      margin-bottom: 3px;
+    }
+
+    .tech-stack {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-style: italic;
+    }
+
+    .project {
+      margin-top: 6px;
+      padding-top: 6px;
+
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--primary);
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .education-entry {
+      font-size: 12px;
+    }
+
+    .education-entry .school {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 12.5px;
+    }
+
+    .education-entry .degree {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .list-inline {
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .list-inline span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border);
+    }
+
+    /* Print styling for 2-page PDF */
+    @media print {
+      body {
+        background: #ffffff;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      header {
+        gap: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0 auto;
+        border-radius: 0;
+        max-width: 100%;
+        padding: 3mm 10mm !important;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+      }
+      /* Prevent awkward breaks and add spacing */
+
+      .experience-role, .project {
+        page-break-inside: avoid;
+      }
+      h2.section-title {
+        margin: 6px 0 6px;
+        page-break-after: avoid;
+      }
+      .skills-list {
+        gap: 6px;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 3mm;
+    }
+
+    /* Download button styling */
+    .download-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .download-btn:hover {
+      background: var(--primary);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media print {
+      .download-btn {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="download-btn" onclick="downloadPDF()" aria-label="Download Resume as PDF">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+    Download PDF
+  </button>
+  <script>
+    function downloadPDF() {
+      window.print();
+    }
+  </script>
+  <div class="page">
+    <header>
+      <div class="name">PIYUSH UPRETI</div>
+      <div class="title">Software Developer | Data Engineer</div>
+      <div class="meta-row">
+        <span>Bengaluru, India</span>
+        <span>Email: piyushupreti07@gmail.com</span>
+        <span>Phone: +91 8765830338</span>
+      </div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/piyush-upreti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Petrinax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://medium.com/@piyushupreti07" target="_blank" rel="noopener noreferrer">Medium</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Profile Summary</h2>
+      <div class="summary">
+        <p>
+          Software Developer with experience building <strong>Data Platforms</strong> and <strong>Backend Services</strong>.
+        </p>
+        <p>
+          Demonstrated expertise in system design, distributed computing, and building scalable cloud-native platforms adopted across business domains.
+          Leveraging AI and automation tools to enhance developer productivity and streamline data workflows.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-list">
+        <div class="skill-line">
+          <strong>Languages & Frameworks:</strong>
+          Python, SQL, Java, Spring Boot, Flask, FastAPI, Django, Spark, PySpark, Pandas
+        </div>
+        <div class="skill-line">
+          <strong>Data & Platforms:</strong>
+          PostgreSQL, Kubernetes, Docker, Airflow, Kafka, Databricks, BigQuery, DataProc, Google Cloud, Azure
+        </div>
+        <div class="skill-line">
+          <strong>Observability & Monitoring:</strong>
+          OpenTelemetry, Grafana, Prometheus, Istio, OpenLineage
+        </div>
+        <div class="skill-line">
+          <strong>AI & Automation Tools:</strong>
+          LangChain, LangGraph, OTel-based monitoring
+        </div>
+        <div class="skill-line">
+          <strong>System Concepts:</strong>
+          Microservices, Distributed Systems, Data Structures &amp; Algorithms
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Engineer</div>
+            <div class="company-line">Navi Technologies | Bengaluru</div>
+          </div>
+          <div class="role-meta">Feb 2026 - Present</div>
+        </div>
+        <ul class="bullets">
+          <li>Hardened <strong>Python/Airflow</strong> orchestration reliability, cutting workflow failures from <strong>~10% to &lt;1%</strong> across production DAGs.</li>
+          <li>Diagnosed and fixed critical design bugs in a production <strong>data ingestion service</strong> serving <strong>~2,000 Hudi pipelines</strong>, delivering the fix with <strong>&lt;30 min downtime</strong> and zero failures.</li>
+          <li>Reduced production incidents by <strong>50%</strong> across distributed backend services, CDC pipelines, and Kubernetes-hosted workloads.</li>
+          <li>Implemented <strong>team-scoped RBAC</strong> and API enhancements for secure workflow access management at platform scale.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: Python, Airflow, PostgreSQL, REST APIs, Kubernetes, Apache Hudi, Debezium, Java, Spring Boot
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Engineer III</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">Sept 2024 - Jan 2026</div>
+        </div>
+        <ul class="bullets">
+          <li>Developed the Core ETL engine powering the Finance Data Lakehouse, enabling <strong>20+ business domains</strong> to onboard data and <strong>process 100M+ records/month.</strong></li>
+          <li>Designed a Centralized Logging and Audit SDK with lineage and quarantine tracing, <strong>improving incident resolution time by 50%.</strong></li>
+          <li>Built a multi-agent orchestration service simplifying pipeline generation and deployment using natural language, <strong>reducing manual development by 80%.</strong></li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: FastAPI, PySpark, Postgres, Kubernetes, Prometheus, Grafana, Istio, OpenTelemetry, OpenLineage, LangChain
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Engineer II</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">June 2022 - Aug 2024</div>
+        </div>
+        <ul class="bullets">
+          <li>Built <strong>event-driven ETL frameworks</strong> for fintech workloads, enhancing reliability and throughput.</li>
+          <li>Developed scalable Flask-based backend services achieving <strong>90%+ test coverage</strong> and <strong>95% code quality.</strong></li>
+          <li>Migrated <strong>2000+ pipelines</strong> to managed cloud infrastructure with <strong>zero downtime.</strong></li>
+          <li>Led peer reviews, enforced engineering best practices, and accelerated new hire onboarding.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: Flask, PySpark, REST APIs, Azure, GCS, Databricks, SQL, BigQuery
+        </div>
+      </div>
+
+      <div class="experience-role">
+        <div class="role-header">
+          <div>
+            <div class="role-title">Software Developer Intern</div>
+            <div class="company-line">Walmart Global Tech India | Bengaluru</div>
+          </div>
+          <div class="role-meta">May 2021 - July 2021</div>
+        </div>
+        <ul class="bullets">
+          <li>Developed UI dashboards and backend logic for an HR automation web application.</li>
+        </ul>
+        <div class="tech-stack">
+          Tech Stack: React, Redux, Node.js, TypeScript, CosmosDB
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE BREAK HERE FOR PRINT -->
+<!--    <section class="section page-break">-->
+    <section class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="project">
+        <div class="project-title">Data Ingestion Service (Navi)</div>
+        <ul class="bullets">
+          <li>Diagnosed and resolved a critical scheduler bug impacting <strong>~2,000 active Hudi ingestion pipelines</strong> in a multi-cloud production setup.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Java, Spring Boot, PostgreSQL, Airflow, Apache Hudi, Kubernetes, Debezium
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Finance Data Lakehouse</div>
+        <ul class="bullets">
+          <li>Built the core ETL engine for data lakehouse enabling multi-domain onboarding, runtime validations, Data Quality, and orchestration for FP&A workloads.</li>
+          <li>Collaborated with architects to define platform roadmap aiming to support 100M+ monthly records.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: PySpark, Kafka, Airflow, Apache Hudi, DataProc, BigQuery
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Unified Data Ingestion Web Service</div>
+        <ul class="bullets">
+          <li>Built highly available & fault-tolerant APIs for data ingestion & consumption, enabling connectivity to data lakes and warehouse storage systems.</li>
+          <li>Reduced production incidents by 80% and improved test coverage to &gt;90%.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Flask, Kubernetes, Docker, Google Cloud, Azure, BigQuery, Akeyless
+        </div>
+      </div>
+
+     <div class="project">
+        <div class="project-title">Centralized Logging &amp; Audit Plugin</div>
+        <ul class="bullets">
+          <li>Designed SDK and data models to instrument lineage and failure tracking across pipelines.</li>
+          <li>Delivered data lineage observability and quarantined-record traces for 1000+ pipelines.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Python, PostgreSQL, OpenTelemetry, OpenLineage, Airflow, PySpark
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Multi-Agent Orchestration Service</div>
+        <ul class="bullets">
+          <li>Designed and developed an Ai-powered multi-agent orchestration engine for data discovery and ETL automation.</li>
+          <li>Reduced platform onboarding effort & enabled autonomous workflow generation.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: FastAPI, Phoenix, Kubernetes, LLM Gateway, OpenTelemetry, LangChain
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Additional Projects</h2>
+
+      <div class="project">
+        <div class="project-title">AI-Driven Textile Workflow Manager (Independent)</div>
+        <ul class="bullets">
+          <li>Built a real-time order workflow management & AI-powered customer support system for textile ops.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: Flask, SocketIO, SQLAlchemy, SQLite, Gmail API, Google Gemini
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Custom Index Builder &amp; Analytics Engine (Independent)</div>
+        <ul class="bullets">
+          <li>Full-stack solution for constructing stock indices, automated ingestion, performance analytics, and export workflows.</li>
+        </ul>
+        <div class="tech-stack">
+          Stack: FastAPI, Redis, Pandas, SQLite, Docker
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-entry">
+        <div class="school">Indian Institute of Technology (BHU), Varanasi</div>
+        <div class="degree">B.Tech in Electronics Engineering | 2018 - 2022</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Honors &amp; Achievements</h2>
+      <div class="list-inline">
+        <span>AIR 2304 in IIT JEE (Advanced), 2018</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Interests</h2>
+      <div class="list-inline">
+        <span>Trading Systems</span>
+        <span>Agentic AI</span>
+        <span>Applied Distributed Computing</span>
+        <span>Technical Content Writing</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
